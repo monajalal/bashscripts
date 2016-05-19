@@ -1,0 +1,6 @@
+	 Quick system report for:	Monas-MacBook-Pro.local
+	 Free Space is:	:26Gi
+	 Machine Type is:	:x86_64-apple-darwin14
+	 Number of files in the directory:	       7
+	 Report generated on:	:05/19/16
+	 Primary memory available is:	8.00
