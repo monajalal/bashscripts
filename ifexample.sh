@@ -6,7 +6,7 @@ else
   echo $a is smaller than 8
 fi
 
-mystring="This is a new string with no number"
+mystring="This is 1 new string with 1 number"
 if [[ $mystring =~ [0-9]+ ]]; then
   echo $mystring contains digits
 else
