@@ -24,4 +24,29 @@ do
   echo i=$i
 done
 
+echo
+arr=( banana peach kiwi )
+for element in "${arr[@]}"
+do
+  echo current element is: $element
+done
+
+for fn in *
+do
+  echo file name is: $fn
+done
+echo
+for i in $(ls)
+do
+  echo i=$i
+done
+
+#case statement
+
+a=cat
+case $a in
+  cat) echo "kitkat";;
+  dog|puppy) echo "haaphaap";;
+  *) echo "not a cattie, not a doggie";;
+esac
 
