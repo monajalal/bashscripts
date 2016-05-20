@@ -15,3 +15,23 @@ function numberThings {
 }
 
 numberThings $(ls)
+for i in $@;
+do
+  echo $i
+done
+
+echo number of arguments is: $#
+
+#working with flags
+while getopts ":a:b:p:u:" opts;
+do
+  case $opts in
+    a) echo got an A flag;;
+    b) echo got an B flag;;
+    u) user=$OPTARG; echo $user;;
+    p) pass=$OPTARG; echo $pass;;
+    ?) echo I don\'t know what flag is this;;
+esac
+done
+
+echo user: $user pass: $pass
