@@ -26,3 +26,13 @@ do
 esac
 done
 
+
+#number of args
+if [ $# -lt 3 ]; then
+  echo you should enter age, sex and favorite number!
+else
+  echo you are $1 years old
+  echo you are a $2
+  echo your favorite number is $3
+fi
+
