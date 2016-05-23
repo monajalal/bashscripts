@@ -18,3 +18,34 @@ done
 #we use tr instead of sed because it has better single char replacement performance
 for i in *;do mv "$i" `echo "$i" | tr " " "_"` ;done
 
+#show only 2nd and 7th characters
+echo helloworld | cut -c2,7
+
+#the first three words of york.txt file
+cut -d " " -f1-3 york.txt
+#grab the second to the last item in a tab separated csv
+#cut -d $'\t' -f2- tablimited.csv
+
+#read lines 10-20 of a file
+sed -n '10,20p' york.txt
+
+#convert all lower cases to upper case using tr
+cat york.txt | tr [:lower:] [:upper:]
+
+#delete all the "t" characters using tr
+cat york.txt | tr -d t
+
+#only show the digits in the text
+echo "my name is mona and I have 123456 pets" | tr -cd [:digit:]
+
+#delete all the lower case characters
+echo "llllOO" | tr -d [:lower]
+
+#remove repeated space chars from the input
+echo "my name is mona and I    have   123456 pets" | tr -s " "
+
+#sorting based on a numerical value
+sort -nt'|' -k2 letsort
+
+#sorting a non-numerical value
+sort -t'|' -k4 letsort
