@@ -49,3 +49,12 @@ sort -nt'|' -k2 letsort
 
 #sorting a non-numerical value
 sort -t'|' -k4 letsort
+
+#create two columns out of contents of a file
+paste -d':'  - - <uniqfile
+
+#create three columns using three different delimiter 
+paste -d':,'  - - - <uniqfile
+
+#paste contents of two files side by side
+paste -d',' uniqfile uniqfile2
