@@ -53,6 +53,12 @@ sort -t'|' -k4 letsort
 #create two columns out of contents of a file
 paste -d':'  - - <uniqfile
 
+#read a mathematical expression and output result with three floating pt digit
+#example input: (-105.5*7+50*3)/20 + (19^2)/7 
+#example output:  22.146
+read exp
+echo "scale=3; $exp" | bc -l
+
 #create three columns using three different delimiter 
 paste -d':,'  - - - <uniqfile
 
